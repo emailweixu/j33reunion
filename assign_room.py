@@ -9,12 +9,12 @@ rooms = [("Boat Basin: one bedroom, one bath, sleeps four", 4),
          ("Mid Rock Overlook: two bedrooms, two bath, sleeps eight", 4),
          ("Mid Rock Overlook: two bedrooms, two bath, sleeps eight", 4),
          ("Three Arches: one bedroom, one bath, sleeps four", 4),
-         ("Chinook: two bedrooms, two baths, sleeps six", 3),
-         ("Chinook: two bedrooms, two baths, sleeps six", 3),
+         ("Chinook: two bedrooms, two baths, sleeps six", 4),
+         ("Chinook: two bedrooms, two baths, sleeps six", 2 + 1),
          ("Zeolite: studio, one bath, sleeps two", 2 + 2),
          ("Rosenburg: two bedrooms, one bath, sleeps six", 6 - 2),
-         ("Finley Rock: two bedrooms, one bath, sleeps six", 4),
-         ("Finley Rock: two bedrooms, one bath, sleeps six", 2 + 1),
+         ("Finley Rock: two bedrooms, one bath, sleeps six", 3),
+         ("Finley Rock: two bedrooms, one bath, sleeps six", 3),
          ]
 
 
@@ -38,7 +38,7 @@ parties = [
 print "total_capacity: ", sum([count for _, count in rooms])
 print "number of persons: ", sum([count for _, count in parties])
 
-random.seed(636687620340746841)
+random.seed(33)
 
 for size in [1, 2, 3, 4, 6, 7]:
     arooms = filter(lambda x: x[1] == size, rooms)
